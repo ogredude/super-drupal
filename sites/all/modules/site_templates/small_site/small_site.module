@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Small Site feature.
+ */
+
+include_once('small_site.features.inc');
