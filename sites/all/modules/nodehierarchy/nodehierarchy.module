@@ -359,7 +359,7 @@ function nodehierarchy_menu_overview_form($form, &$form_state, $menu) {
  */
 function nodehierarchy_form_menu_edit_item_alter(&$form, &$form_state) {
   // Replace the parent pulldown with the node hierarchy parent selector.
-  if ($form['menu']['#item']['module'] == 'nodehierarchy') {
+  if (isset($form['menu']) && $form['menu']['#item']['module'] == 'nodehierarchy') {
     // Add the js to hide/show the menu selector.
     drupal_add_js(drupal_get_path("module", "nodehierarchy") . '/nodehierarchy.js');
 

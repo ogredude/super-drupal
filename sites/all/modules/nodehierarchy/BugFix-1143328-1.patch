@@ -1,0 +1,19 @@
+diff --git a/sites/all/modules/nodehierarchy/nodehierarchy.module b/sites/all/modules/nodehierarchy/nodehierarchy.module
+index 57ddea9..983b50e 100644
+--- a/sites/all/modules/nodehierarchy/nodehierarchy.module
++++ b/sites/all/modules/nodehierarchy/nodehierarchy.module
+@@ -359,7 +359,7 @@ function nodehierarchy_menu_overview_form($form, &$form_state, $menu) {
+  */
+ function nodehierarchy_form_menu_edit_item_alter(&$form, &$form_state) {
+   // Replace the parent pulldown with the node hierarchy parent selector.
+-  if ($form['menu']['#item']['module'] == 'nodehierarchy') {
++  if (isset($form['menu']) && $form['menu']['#item']['module'] == 'nodehierarchy') {
+     // Add the js to hide/show the menu selector.
+     drupal_add_js(drupal_get_path("module", "nodehierarchy") . '/nodehierarchy.js');
+ 
+diff --git a/sites/default/themes/pzo_zen b/sites/default/themes/pzo_zen
+--- a/sites/default/themes/pzo_zen
++++ b/sites/default/themes/pzo_zen
+@@ -1 +1 @@
+-Subproject commit 48e8e5966e88ca08296de4f41878dea21056f530
++Subproject commit 48e8e5966e88ca08296de4f41878dea21056f530-dirty
