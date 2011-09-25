@@ -347,7 +347,6 @@ function nodehierarchy_menu_overview_form($form, &$form_state, $menu) {
 
   // Set the form handlers so the behaviour is the same as the regular menu form.
   $form['#submit'][] = 'menu_overview_form_submit';
-  $form['#validate'][] = 'menu_overview_form_validate';
   return $form;
 }
 
@@ -411,7 +410,6 @@ function nodehierarchy_form_menu_edit_item_submit($form, &$form_state) {
 function theme_nodehierarchy_menu_overview_form($variables) {
   $form = $variables['form'];
 
-  drupal_add_js(drupal_get_path("module", "nodehierarchy") . '/nodehierarchy.tabledrag.js');
   drupal_add_css(drupal_get_path('module', 'nodehierarchy') . '/nodehierarchy.css');
 
   // Show a notice if items have been omitted.
