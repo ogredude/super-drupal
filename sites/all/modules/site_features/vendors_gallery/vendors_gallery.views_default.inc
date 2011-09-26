@@ -302,7 +302,10 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
+<<<<<<< HEAD
   $handler->display->display_options['block_description'] = 'Featured Vendors Slideshow';
+=======
+>>>>>>> 6ee33a3cb907a6408f9bf61def8e22ba45bc039c
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
