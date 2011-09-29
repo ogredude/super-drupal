@@ -129,9 +129,8 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'view_node' => 0,
-    'field_slider_image' => 0,
-    'field_slider_image_1' => 0,
+    'field_vendor_link' => 0,
+    'field_vendor_logo' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
@@ -139,14 +138,13 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'view_node' => 0,
-    'field_slider_image' => 0,
-    'field_slider_image_1' => 0,
+    'field_vendor_link' => 0,
+    'field_vendor_logo' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['effect'] = 'toss';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['effect'] = 'scrollRight';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '5000';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['speed'] = '700';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['delay'] = '0';
@@ -155,6 +153,7 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '1';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['advanced_options'] = '{"easing":"easeInOutBack"}';
   $handler->display->display_options['style_options']['views_slideshow_ddblock'] = array(
     'widget' => 'cycle',
     'debug_info' => 'none',
@@ -302,10 +301,7 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
-<<<<<<< HEAD
   $handler->display->display_options['block_description'] = 'Featured Vendors Slideshow';
-=======
->>>>>>> 6ee33a3cb907a6408f9bf61def8e22ba45bc039c
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
@@ -319,6 +315,63 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Vendor Link */
+  $handler->display->display_options['fields']['field_vendor_link']['id'] = 'field_vendor_link';
+  $handler->display->display_options['fields']['field_vendor_link']['table'] = 'field_data_field_vendor_link';
+  $handler->display->display_options['fields']['field_vendor_link']['field'] = 'field_vendor_link';
+  $handler->display->display_options['fields']['field_vendor_link']['label'] = '';
+  $handler->display->display_options['fields']['field_vendor_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_vendor_link']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_vendor_link']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_vendor_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_vendor_link']['type'] = 'plain';
+  $handler->display->display_options['fields']['field_vendor_link']['field_api_classes'] = 0;
+  /* Field: Content: Vendor Logo */
+  $handler->display->display_options['fields']['field_vendor_logo']['id'] = 'field_vendor_logo';
+  $handler->display->display_options['fields']['field_vendor_logo']['table'] = 'field_data_field_vendor_logo';
+  $handler->display->display_options['fields']['field_vendor_logo']['field'] = 'field_vendor_logo';
+  $handler->display->display_options['fields']['field_vendor_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['path'] = '[field_vendor_link]';
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_vendor_logo']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_vendor_logo']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_vendor_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_vendor_logo']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_vendor_logo']['field_api_classes'] = 0;
   $handler->display->display_options['path'] = 'vendors';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Vendors';

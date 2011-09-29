@@ -48,7 +48,7 @@ function vendors_gallery_field_default_fields() {
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => 2,
         ),
         'teaser' => array(
@@ -65,8 +65,10 @@ function vendors_gallery_field_default_fields() {
       'settings' => array(
         'attributes' => array(
           'class' => '',
+          'configurable_title' => 0,
           'rel' => '',
           'target' => '_blank',
+          'title' => '',
         ),
         'display' => array(
           'url_cutoff' => '80',
@@ -76,6 +78,7 @@ function vendors_gallery_field_default_fields() {
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
