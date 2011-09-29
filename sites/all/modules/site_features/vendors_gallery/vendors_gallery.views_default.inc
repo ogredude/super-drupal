@@ -87,7 +87,7 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_vendor_logo']['hide_alter_empty'] = 0;
   $handler->display->display_options['fields']['field_vendor_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_vendor_logo']['settings'] = array(
-    'image_style' => 'slide',
+    'image_style' => 'vendor_slide',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_vendor_logo']['field_api_classes'] = 0;
@@ -309,7 +309,6 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['title'] = 'Vendors';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['style_options']['fill_single_line'] = 1;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -368,7 +367,7 @@ function vendors_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_vendor_logo']['hide_alter_empty'] = 0;
   $handler->display->display_options['fields']['field_vendor_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_vendor_logo']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'vendor_logo',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_vendor_logo']['field_api_classes'] = 0;
