@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file jquery_force.module
+ * TODO: Enter file description here.
+ */
+
+/**
+ * Implements hook_init().
+ */
+function jquery_force_init() {
+	drupal_add_library('system', 'ui');
+}
+
