@@ -10,3 +10,6 @@ sites/*
 # Ignore logs
 logs
 logs/*
+
+# Ignore .htaccess
+.htaccess
