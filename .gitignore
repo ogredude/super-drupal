@@ -4,12 +4,3 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-sites/*
-!sites/all
-
-# Ignore logs
-logs
-logs/*
-
-# Ignore .htaccess
-.htaccess
