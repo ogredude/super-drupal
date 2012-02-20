@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Vendors Gallery feature.
+ */
+
+include_once('vendors_gallery.features.inc');

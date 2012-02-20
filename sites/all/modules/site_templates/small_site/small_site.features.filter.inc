@@ -13,7 +13,7 @@ function small_site_filter_default_formats() {
   // Exported format: Purified HTML
   $formats['filtered_html'] = array(
     'format' => 'filtered_html',
-    'name' => 'Purified HTML',
+    'name' => 'Filtered HTML',
     'cache' => '1',
     'status' => '1',
     'weight' => '0',
