@@ -7,9 +7,9 @@ files[] = htmlpurifier.admin.inc
 files[] = HTMLPurifier_DefinitionCache_Drupal.php
 configure = admin/config/content/htmlpurifier
 
-; Information added by drupal.org packaging script on 2011-02-25
+; Information added by drupal.org packaging script on 2012-01-29
 version = "7.x-2.x-dev"
 core = "7.x"
 project = "htmlpurifier"
-datestamp = "1298619391"
+datestamp = "1327798322"
 
